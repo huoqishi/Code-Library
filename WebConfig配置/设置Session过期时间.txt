@@ -1,0 +1,3 @@
+﻿<system.web>
+    <sessionState cookieName="JSESSIONID" timeout="999" mode="InProc"></sessionState>
+</system.web>

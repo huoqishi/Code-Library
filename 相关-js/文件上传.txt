@@ -1,0 +1,37 @@
+﻿    var count=parseInt($('#count').val());
+    for (var i = 0; i < count; i++) {
+        $('#uploadFile'+i).change(function () {
+            //表单数据
+            var fd = new FormData();
+            fd.append("myfile", this.files[0]);
+            $.ajax({
+                url:'/BackStage/SaveImg',
+                type:'post',
+                datatype:'json',
+                cache:false,
+                context:this,
+                data: fd,
+                /**   
+                 * 必须false才会避开jQuery对 formdata 的默认处理   
+                 * XMLHttpRequest会对 formdata 进行正确的处理   
+                 */
+                processData: false,
+                /**   
+                 *必须false才会自动加上正确的Content-Type   
+                 */
+                contentType: false,
+                error: function () {
+                    alert(222);
+                },
+                success:function (data) {
+                    if (data.state=='ok') {
+                        $(this).parent().prev().attr('src', data.src);
+                    }
+                    else {
+                        alert('上传失败！');
+                    }
+                }
+            });
+            
+        });
+    }

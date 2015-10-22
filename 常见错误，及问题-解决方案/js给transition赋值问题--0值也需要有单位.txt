@@ -1,0 +1,3 @@
+//0也需要带单位
+'none 0s linear'   正确
+'none 0 linear'    不正确

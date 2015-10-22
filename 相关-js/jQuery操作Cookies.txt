@@ -1,0 +1,85 @@
+使用方法：
+
+　　1、引入jQuery与jQuery.Cookie.js插件。
+    <script src="jQuery.1.8.3.js" type="text/javascript"></script>
+    <script src="jquery.cookie.js" type="text/javascript"></script>
+　　2、函数。
+      语法：$.cookie(名称,值,[option])
+　　　(1)读取cookie值
+　　　$.cookie(cookieName)　　　　　　　　　cookieName:要读取的cookie名称。
+　　   示例：$.cookie("username");　　　　　  读取保存在cookie中名为的username的值。
+
+　　　(2)写入设置Cookie值：
+　　　$.cookie(cookieName,cookieValue);　　cookieName:要设置的cookie名称，cookieValue表示相对应的值。
+　　　示例:$.cookie("username","admin");　  将值"admin"写入cookie名为username的cookie中。
+　　　　　 $.cookie("username",NULL);　　　销毁名称为username的cookie
+　　　(3) [option]参数说明：
+　　　　　expires:　　有限日期，可以是一个整数或一个日期(单位：天)。　　这个地方也要注意，如果不设置这个东西，浏览器关闭之后此cookie就失效了
+　　　　　path:　　　 cookie值保存的路径，默认与创建页路径一致。
+
+　　　　   domin:　　  cookie域名属性，默认与创建页域名一样。　　这个地方要相当注意，跨域的概念，如果要主域名二级域名有效则要设置　　".xxx.com"
+
+　　　　   secrue:　　 一个布尔值，表示传输cookie值时，是否需要一个安全协议。
+
+　　　　　示例：
+
+        $.cookie("like", $(":radio[checked]").val(), {
+        　　path: "/", expiress: 7
+        })
+一个完整设置与读取cookie的页面代码：
+
+//------------------------------------完整示例---------------------------------------------------
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>jQuery学习2</title>
+    <script src="jQuery.1.8.3.js" type="text/javascript"></script>
+    <script src="jquery.cookie.js" type="text/javascript"></script>
+    <script type="text/javascript">
+        $(function () {
+            $("#username").val($.cookie("username"));
+            if ($.cookie("like") == "刘德华") {
+                $(":radio[value='刘德华']").attr("checked", 'checked')
+            }
+            else {
+                $(":radio[value='张学友']").attr("checked", 'checked')
+            }
+            $(":button").click(function () {
+                $.cookie("username", $("#username").val(), {
+                    path: "/", expires: 7
+                })
+                $.cookie("like", $(":radio[checked]").val(), {
+                    path: "/", expiress: 7
+                })
+            })
+        })
+    </script>
+</head>
+<body>
+    <p><input type="text" id="username" value="" /></p>
+    <p>
+        <input type="radio" name="like" value="刘德华" />刘德华
+        <input type="radio" name="like" value="张学友" />张学友
+    </p>
+    <p><input type="button" value="保存" /></p>
+</body>
+</html>
+复制代码
+ 　　cookie本质上是一个txt文本，因此只能够存入字符串，对象通常要序列化之后才能存入cookie，而取的时候要反序列才又能得到对象。
+
+复制代码
+        $(function () {
+            if ($.cookie("o") == null) {
+                var o = { name: "张三", age: 24 };
+                var str = JSON.stringify(o);　　//对序列化成字符串然后存入cookie
+                $.cookie("o", str, {
+                    expires:7   //设置时间，如果此处留空，则浏览器关闭此cookie就失效。
+                });
+                alert("cookie为空");
+            }
+            else {
+                var str1 = $.cookie("o");
+                var o1 = JSON.parse(str1);　　//字符反序列化成对象
+                alert(o1.name);　　　　　　　　//输反序列化出来的对象的姓名值
+            }
+        })
+复制代码

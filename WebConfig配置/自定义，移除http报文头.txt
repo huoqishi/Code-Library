@@ -1,0 +1,70 @@
+﻿1.移除X-AspNet-Version HTTP头
+     X-AspNet-Version HTTP头会告诉全世界我们服务器当前使用的Asp.net版本，去除这个HTTP头简直是小菜一碟，只需要在Web.Config的<system.web>节点下添加如下内容:
+
+<httpRuntime enableVersionHeader="false" /> 
+     是不是非常轻松愉快？
+
+2.移除X-AspNetMvc-Version HTTP头
+     X-AspNetMvc-Version HTTP头会自动被Asp.net MVC框架加入进去，如果你没有使用Asp.net MVC,这个HTTP头不会存在.移除这个HTTP头的方式是在Global.asax的Application_Start事件中将MvcHandler类的DisableMvcResponseHeader属性设置为True
+
+// C# MvcHandler.DisableMvcResponseHeader = true;
+
+
+' VB
+MvcHandler.DisableMvcResponseHeader = True 
+
+3.移除X-Powered-By HTTP头
+在IIS中改,有这个选项
+
+4.移除server头
+////////C#代码开始
+public class RemoveServerInfoModule : IHttpModule
+    {
+
+        public void Dispose()
+        {
+            //throw new NotImplementedException();
+        }
+
+        public void Init(HttpApplication context)
+        {
+            context.PreSendRequestHeaders += new EventHandler(context_PreSendRequestHeaders);
+        }
+
+        void context_PreSendRequestHeaders(object sender, EventArgs e)
+        {
+            try
+            {
+                HttpApplication app = sender as HttpApplication;
+                if (null != app && null != app.Request && !app.Request.IsLocal && null != app.Context && null != app.Context.Response)
+                {
+                    var headers = app.Context.Response.Headers;
+                    if (null != headers)
+                    {
+                        headers.Remove("Server");
+                        //移除Server标头
+                        //HttpContext.Current.Response.Headers.Remove("Server");
+                        //重新设置Server标头
+                        //HttpContext.Current.Response.Headers.Set("Server", "Windows Server 2012");
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                //Log.HandleException(ex);
+            }
+        }
+    }
+/////////C#代码结束
+----webconfig开始---
+<system.web>
+<httpModules  >
+      <add name="RemoveServerInfoModule" type="MyWeb.RemoveServerInfoModule"/>
+    </httpModules>
+</system.web>
+<system.webserver>
+<modules runAllManagedModulesForAllRequests="true" >
+      <add name="RemoveServerInfoModule" type="MyWeb.RemoveServerInfoModule"/>
+    </modules>
+</system.webserver>
+----webconfig结束---

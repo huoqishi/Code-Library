@@ -1,0 +1,13 @@
+校内达，小麦公社
+
+
+if (name.val().length <= 0) {
+        showmsg('亲，记得填写姓名哦！', name);
+        return false;
+    }
+    if (name.val().length==0) {
+        showmsg('亲，记得填写姓名哦！', name);
+        return false;
+    }
+	
+时间

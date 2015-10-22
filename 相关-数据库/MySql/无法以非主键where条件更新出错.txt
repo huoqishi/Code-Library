@@ -1,0 +1,6 @@
+﻿执行下面的语句：
+直接执行就可以了
+SET SQL_SAFE_UPDATES = 0;
+
+也可以改回来：
+SET SQL_SAFE_UPDATES = 1;

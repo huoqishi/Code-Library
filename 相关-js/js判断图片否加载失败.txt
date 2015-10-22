@@ -1,0 +1,1 @@
+﻿<img src="lala.jpg" onerror="this.onerror=null; this.src='http://center.blueidea.com/data/avatar/000/56/44/02_avatar_big.jpg'; alert('图片地址出错 已调用默认图片');">

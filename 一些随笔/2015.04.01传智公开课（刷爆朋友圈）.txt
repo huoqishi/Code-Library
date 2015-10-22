@@ -1,0 +1,68 @@
+﻿1.新闻保存为静态页
+2.信息采集，抓取  NVelocity/Razor 引擎的使用
+3.发送到微博、微信朋友圈
+4.SDK（第三方登录，分享、发微博）使用
+
+服务器部署
+IIS
+防火
+
+火车头信息采集器：８．６
+1。根据你的设置规则，生成一组URL
+2。遍历每一个URL地址，分别使用WｅｂCｌｉｎｅｔ下载到内在中（这个软件是用.net写的）
+2.对每一个URL判断是否有效，直接保存到数据库
+3.根据你设置的规则将关键信息匹配出来
+4.保存到一个临时数据库中（）
+
+
+id url   是否已经采集过了    title content 
+
+${title}
+
+NVelocity/很长时间没人维护：
+
+//razor是跟aspx一样是编译型的模板引擎：
+//NVelocity是解释型的植株引擎
+
+用的不好razor会有代码冗余。但是有代码颜色，提示，用的人也很多
+
+NVelocity使用：
+有个Helper
+初始NVelocity组件
+var helper=new VelocityHelper("/templates/");
+helper.Put(data);
+
+
+
+直接引用dll和用
+newGet--.net
+meiwen--java 
+noteps
+
+<httpRunTime requestValidationMode="2.0"/>
+<!--不设置post提交安全验证-->
+短信猫--
+
+如何安全的提交富文本（.net）
+wordpress 
+
+
+
+
+
+
+codeplex
+
+发微博包：NetDimension.Weibo
+
+www.dnspod.cn----dns解析 ，功能比万网强大一点
+
+个人站长
+
+AOP：面向切面编程
+
+
+百度提供的各网站分享代码
+
+
+最新word内部 ：xml

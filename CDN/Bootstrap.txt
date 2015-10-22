@@ -1,0 +1,11 @@
+<link href=""></link>
+<link href="http://cdn.bootcss.com/bootstrap/3.3.1/css/bootstrap.min.css"></link>
+<link href="http://cdn.bootcss.com/bootstrap/3.3.1/css/bootstrap.css"></link>
+<script src="http://cdn.bootcss.com/bootstrap/3.3.1/js/bootstrap.min.js"></scrip>
+
+//js
+<script src="http://cdn.bootcss.com/jquery/2.1.3/jquery.js"></scrip>
+<script src="http://cdn.bootcss.com/jquery/2.1.3/jquery.min.js"></scrip>
+<script src="http://cdn.bootcss.com/jquery/2.1.3/jquery.min.map"></scrip>
+<script src=""></scrip>
+<script src=""></scrip>

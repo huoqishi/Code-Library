@@ -1,0 +1,90 @@
+重力感应
+
+重力感应较简单，只需要为body节点添加onorientationchange事件即可。
+
+在此事件中由window.orientation属性得到代表当前手机方向的数值。window.orientation的值列表如下：
+0：与页面首次加载时的方向一致
+-90：相对原始方向顺时针转了90°
+180：转了180°
+90：逆时针转了90°
+
+测试，Android2.1尚未支持重力感应。以上即目前的触屏事件，这些事件尚未并入标准，但已被广泛使用。未在其他环境下测试。
+
+//以上为转载。下面是偶在做电子阅读的实例
+
+1）随手指滑动，需要滑动的区域<div id="#roll" ontouchmove="tmove(event)"></div>
+
+<script type="text/javascript">
+var u = $('#roll');
+function tmove(evet){
+var touch = evet.touches[0];
+var x = touch.clientX;
+var y = touch.clientY;
+var left = $("#roll").css("left");
+
+$("#roll").animate({left:"-264px"},1000);
+
+ evet.preventDefault();
+}
+
+</script>
+
+2)手指滑动离开后触发需要滑动的区域<div id="#roll" ontouchend="tend(event)" ontouchstart="tstart(event)"></div>
+ var down = 0;
+ var up = 0;
+ var index=0;
+ var w = 64;
+ function tstart(event)
+ {
+  down=event.changedTouches[0].pageX;//获取手指刚触摸时的x坐标
+  }
+ function tend(event)
+ {
+  up=event.changedTouches[0].pageX;//获取手指离开时的x坐标
+  ul_obj = $("#roll");
+  if(down>up)
+   {//向左
+   $("#roll").animate({left:(index+"px")},1000);
+    index = index-64<=-180?-180:index-w;
+   }
+  else if(down<up)
+   {//向右
+    $("#roll").animate({left:((index+w)+"px")},1000);
+    index = index+64>0?0:index+w;
+  }
+  }
+
+3)还有就是电子书别的一些用到滴~帮助记忆~
+
+3.1 ) 清空文本框:
+
+$("input").attr("value","");
+
+3.2 ) setIntervar(function（）{ }，1000) 设置自动轮播图
+
+setInterval(function (){      
+      if (i > $('.img ul li img').length - 2) 
+       {
+        i = 0;
+       $('.dot a').removeClass('at').eq(i).addClass('at'); 
+       }
+      else{
+      i++;
+      $('.dot a').removeClass('at').eq(i).addClass('at');
+    }
+      $('.img ul').animate({left:-300*i},1000)
+
+},2000);
+
+3.3 ）setTimeout(function(){},1000) 设置一定时间后触发事件
+
+setTimeout(function (){      
+      $('#feedOk').hide();
+
+      $("#read a").html(“下载成功！”);
+      document.location.href="index.html";
+      },2000);
+
+3.4）返回上一页
+
+ <a href="javascript:history.back()" class="back"></a>

@@ -1,0 +1,6 @@
+﻿链接本地数据库：
+mysql-hlocalhost -uroot -p;回车；要求你输入密码，输入后回车
+
+链接远程数据库：在cmd下运行，或linux命令行，不是MySql服务器中
+端口的P要大写
+mysql -h 192.168.0.201 -P 3306 -u root -p123

@@ -1,0 +1,2 @@
+﻿ANT_HOME          D:\Program Files\apache-ant-1.9.4
+PATH              %ANT_HOME%\bin

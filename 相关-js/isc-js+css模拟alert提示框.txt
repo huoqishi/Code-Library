@@ -1,0 +1,94 @@
+﻿html:
+<div class="myalert"></div>
+
+js:
+//#region 模拟alert框
+function appAlert(msg, funcSure, funcCancel) {  //后台两个是按钮的回调函数
+    var $myalert = $('.myalert');
+    $myalert.unbind('click');
+    $myalert.append(
+       ' <div class="alert-box">                                         ' +
+       '         <div class="alert-info">                                ' +
+       '             <div class="alert-context"></div>                   ' +
+       '<div>'+
+       '             <button class="mybtn alert-sure">确定</button>      ' +
+       '             <button class="mybtn alert-cancel">取消</button>    ' +
+       '         </div>                                                  ' +
+       '     </div>');
+    var h = $(window).height();
+    var $alert_box = $('.alert-box');
+    $myalert.css('left', '100%').show();
+    var top = h / 2 - $alert_box.height() / 2;
+    $myalert.css('left', '0').hide();
+    $('.alert-context').text(msg);
+    $alert_box.css('top', top + 'px');
+    $myalert.removeClass('fadeOut').addClass('animated fadeIn').show();
+    top = h / 2 - $alert_box.height() / 2;
+    wapClick($('.alert-sure'), function (e, $this) {
+        hideAlert($myalert);
+        if (funcSure) {
+            funcSure();
+        }
+    });
+    wapClick($('.alert-cancel'), function (e, $this) {
+        hideAlert($myalert)
+        if (funcCancel) {
+            funcCancel();
+        }
+    });
+}
+function hideAlert($myalert) {
+    $myalert.removeClass('fadeIn').addClass('fadeOut');
+    setTimeout(function () { $myalert.empty() }, 100);
+}
+//#endregion 
+css:
+.myalert {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    z-index: 800000;
+    overflow: hidden;
+    top: 0;
+    left: 0;
+    display: none;
+}
+
+
+.alert-box {
+    width: 70%;
+    min-height: 90px;
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.90);
+    margin: 0 auto;
+    border: 1px solid #c6c;
+    color: #c6c;
+    border-radius: 6px;
+    position:relative;
+}
+
+.alert-context {
+    width:100%;
+    min-height: 90px;
+    height: 90px;
+    display: table-cell;
+    vertical-align: middle;
+}
+
+.mybtn {
+    width:60px;
+    font-size: 14px;
+    line-height: 20px;
+    color: #fff;
+    text-align: center;
+    text-shadow: 0 1px 1px rgba(255, 255, 255, 0.75);
+    background-color:#c6c;
+    cursor: pointer;
+    outline: none;
+    border: none;
+    border-radius: 4px;
+    margin-bottom:5px;
+}
+.mybtn:active{
+    color:#000;
+}

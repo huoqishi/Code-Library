@@ -1,0 +1,6 @@
+﻿.temp{
+	display:none;/*有渲染和回流，子元素会被珠连*/
+}
+.temp{
+	visibility: hidden;/*无渲染和回流，占居空间，子元素会被隐藏，但是可以设置visibility:visible来显示*/
+}

@@ -1,0 +1,110 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title></title>
+    <style>
+        .upfile button {
+            width: 100px;
+            height: 30px;
+            border-radius: 4px;
+            border: 0;
+            background-color: #349ce6;
+            color: #fff;
+            text-align: center;
+            position: absolute;
+        }
+
+        .upfile input {
+            opacity: 0.7;
+            position: absolute;
+        }
+
+        .upfile {
+            text-align: center;
+        }
+    </style>
+    <style>
+        /*a  upload */
+        .a-upload {
+            padding: 4px 10px;
+            height: 20px;
+            line-height: 20px;
+            position: relative;
+            cursor: pointer;
+            color: #888;
+            background: #fafafa;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            overflow: hidden;
+            display: inline-block;
+            *display: inline;
+            *zoom: 1;
+        }
+
+            .a-upload input {
+                position: absolute;
+                font-size: 100px;
+                right: 0;
+                top: 0;
+                opacity: 0;
+                filter: alpha(opacity=0);
+                cursor: pointer;
+            }
+
+            .a-upload:hover {
+                color: #444;
+                background: #eee;
+                border-color: #ccc;
+                text-decoration: none;
+            }
+    </style>
+    <style>
+        .file {
+            position: relative;
+            display: inline-block;
+            background: #1E88C7;
+            border:0;
+            border-radius: 4px;
+            padding: 4px 12px;
+            overflow: hidden;
+            color:#fff;
+            text-decoration: none;
+            text-indent: 0;
+            line-height: 20px;
+        }
+
+            .file input {
+                position: absolute;
+                font-size: 100px;
+                right: 0;
+                top: 0;
+                opacity: 0;
+            }
+
+            .file:hover {
+                background-color:#0973b2;
+            }
+    </style>
+</head>
+<body>
+    <div class="upfile">
+        <button>更换图片</button>
+        <input class="" type="file" name="upfile" />
+    </div>
+    <br />
+    <br />
+    <br />
+
+    <a href="javascript:;" class="a-upload">
+        <input type="file" name="" id="">点击这里上传文件
+    </a>
+    <br />
+    <br />
+    <br />
+    <a href="javascript:;" class="file">
+        更换图片
+        <input type="file" name="" id="">
+    </a>
+</body>
+</html>

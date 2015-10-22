@@ -1,0 +1,10 @@
+﻿1.相对浏览器窗口的位置：
+var top = $(o.obj).offset().top - $(window).scrollTop();
+
+2.绝对坐标
+$("#elem").offset().top
+$("#elem").offset().left
+
+3.相对父元素的位置坐标：
+$("#elem").position().top
+$("#elem").position().left

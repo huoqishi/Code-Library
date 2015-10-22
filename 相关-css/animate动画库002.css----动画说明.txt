@@ -1,0 +1,167 @@
+﻿//用法
+1、首先引入animate css文件
+1
+2
+3
+<head>
+  <link rel="stylesheet" href="animate.min.css">
+</head>
+2、给指定的元素加上指定的动画样式名
+1
+<div class="animated bounceOutLeft"></div>
+这里包括两个class名，第一个是基本的，必须添加的样式名，任何想实现的元素都得添加这个。第二个是指定的动画样式名。
+
+3、如果说想给某个元素动态添加动画样式，可以通过jquery来实现：
+1
+$('#yourElement').addClass('animated bounceOutLeft');
+--------------------------------------------------------------------------------------------------------
+
+bounce                          弹跳
+flash							闪光
+pulse							脉冲
+rubberBand						橡皮
+shake							摇
+swing							摇摆
+tada							田田
+wobble							摇晃
+jello							果冻
+bounceIn						反弹
+bounceInDown					反弹向下
+bounceInLeft					反弹在左
+bounceInRight					反弹在右
+bounceInUp						反弹向上
+bounceOut						走出反弹
+bounceOutDown					反弹淘汰下来
+bounceOutLeft					弹跳出左
+bounceOutRight					弹跳出右
+bounceOutUp						反弹了长达
+fadeIn							淡入
+fadeInDown						淡入向下
+fadeInDownBig					淡入向下大
+fadeInLeft						淡入左
+fadeInLeftBig					淡入左大
+fadeInRight						淡出右
+fadeInRightBig					淡出右大
+fadeInUp						淡入最多
+fadeInUpBig						淡入涨大
+fadeOut							淡出
+fadeOutDown						淡出向下
+fadeOutDownBig					淡出向下大
+fadeOutLeft						淡出左
+fadeOutLeftBig					淡出左大
+fadeOutRight					淡出权
+fadeOutRightBig					淡出右脚大
+fadeOutUp						淡出最多
+fadeOutUpBig					淡出涨大
+flipInX							翻转在X中
+flipInY							翻转在该Y
+flipOutX						转出X
+flipOutY						翻转输出Y
+lightSpeedIn					光速
+lightSpeedOut					光速退房
+rotateIn						在旋转
+rotateInDownLeft				旋转在向下向左
+rotateInDownRight				旋转在向下向右
+rotateInUpLeft					旋转在上左
+rotateInUpRight					旋转在右上
+rotateOut						转出
+rotateOutDownLeft				转出下左
+rotateOutDownRight				转出向下向右
+rotateOutUpLeft					旋转了长达左
+rotateOutUpRight				转出右上
+hinge							合页
+rollIn							在滚
+rollOut							推出
+zoomIn							ZOOM IN
+zoomInDown						放大唐氏
+zoomInLeft						放大左
+zoomInRight						放大右
+zoomInUp						放大在向上
+zoomOut							缩小
+zoomOutDown						缩小向下
+zoomOutLeft						缩小左
+zoomOutRight					缩小右
+zoomOutUp						缩小最多
+slideInDown						幻灯片在向下
+slideInLeft						幻灯片在左
+slideInRight					幻灯片在右
+slideInUp						幻灯片在向上
+slideOutDown					滑出向下
+slideOutLeft					滑出左
+slideOutRight					滑出右
+slideOutUp						滑出最多
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

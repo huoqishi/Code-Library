@@ -1,0 +1,79 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>flex 新旧语法混用：</title>
+</head>
+<body>
+    flex 新旧语法混用：
+    不要轻易改变属性的顺序;
+    Demo:
+    <div class="page-wrap">
+        <section class="main-content" role="main">
+            Main content: first in source order
+        </section>
+        <nav class="main-nav" role="navigation">
+            Links
+        </nav>
+        <aside class="main-sidebar" role="complementary">
+            Sidebar
+        </aside>
+    </div>
+    /////
+    <style>
+        .page-wrap {
+            display: -webkit-box; /* OLD - iOS 6-, Safari 3.1-6 */
+            display: -moz-box; /* OLD - Firefox 19- (buggy but mostly works) */
+            display: -ms-flexbox; /* TWEENER - IE 10 */
+            display: -webkit-flex; /* NEW - Chrome */
+            display: flex; /* NEW, Spec - Opera 12.1, Firefox 20+ */
+        }
+
+        .main-content {
+            background-color:#ccc;
+
+            width: 60%;
+        }
+        /*设置侧边栏来填充空间，不显示设置width在旧语法在可能崩溃*/
+        .main-nav,
+        .main-sidebar {
+            background-color:#f00;
+
+            -webkit-box-flex: 1; /* OLD - iOS 6-, Safari 3.1-6 */
+            -moz-box-flex: 1; /* OLD - Firefox 19- */
+            width: 20%; /* For old syntax, otherwise collapses. */
+            -webkit-flex: 1; /* Chrome */
+            -ms-flex: 1; /* IE 10 */
+            flex: 1; /* NEW, Spec - Opera 12.1, Firefox 20+ */
+        }
+
+
+        /*让主容器显示在中间，默认在最左边*/
+        .main-content {
+            
+
+            -webkit-box-ordinal-group: 2; /* OLD - iOS 6-, Safari 3.1-6 */
+            -moz-box-ordinal-group: 2; /* OLD - Firefox 19- */
+            -ms-flex-order: 2; /* TWEENER - IE 10 */
+            -webkit-order: 2; /* NEW - Chrome */
+            order: 2; /* NEW, Spec - Opera 12.1, Firefox 20+ */
+        }
+
+        .main-nav {
+            -webkit-box-ordinal-group: 1;
+            -moz-box-ordinal-group: 1;
+            -ms-flex-order: 1;
+            -webkit-order: 1;
+            order: 1;
+        }
+
+        .main-sidebar {
+            -webkit-box-ordinal-group: 3;
+            -moz-box-ordinal-group: 3;
+            -ms-flex-order: 3;
+            -webkit-order: 3;
+            order: 3;
+        }
+    </style>
+</body>
+</html>

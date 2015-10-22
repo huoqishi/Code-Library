@@ -1,0 +1,5 @@
+1.获取只能在微信中打开的页面的代码
+url=这里直接写需要打开的链接
+http://tool.rsen.cn/wap.php?url=http://wx.book.mybitsea.com/index
+
+1.这是在网站上找到的代码，目前不知道作者是用什么实现的。

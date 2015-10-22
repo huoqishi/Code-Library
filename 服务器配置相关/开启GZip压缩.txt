@@ -1,0 +1,3 @@
+首先开启压缩：
+然后在C:\Windows\System32\inetsrv\config\applicationhost.config
+目录下配置。

@@ -1,0 +1,17 @@
+﻿<style type="text/css">
+body{background:blue;}
+/*蓝色 默认颜色只有当下面条件都不匹配的时候，即宽度500px-800px之间+高度100px-400px之间*/
+@media screen and (max-width:500px){body{background:green;}}
+/*宽度小于500px时 绿色*/
+@media screen and (min-width:800px){body{background:red;}}
+/*宽度大于800px时 红色*/
+@media screen and (max-height:100px){body{background:yellow;}}
+/*高度小于100px时 黄色*/
+@media screen and (min-height:400px){body{background:pink;}}
+/*高度大于400px时 粉色*/
+
+@media screen and (min-width: 600px) and (max-width: 900px){.....}
+/*宽度在600px-900px之间时候...*/
+@media screen and (width:1024px){.....}
+/*宽度刚刚好等于1024px的时候...*/
+</style>

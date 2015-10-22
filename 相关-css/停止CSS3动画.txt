@@ -1,0 +1,6 @@
+﻿1.如果是transition ,直接设置 transition-property:none;
+	如果没用效果，把时间同时改为 0.001s
+
+2.如果是animation动画，设置：
+$('.aa').css('-webkit-animation-play-state', 'paused');
+$('.aa').css('animation-play-state', 'paused');

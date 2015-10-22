@@ -1,0 +1,7 @@
+js设置样式无效
+情况1：
+为元素设置css动画，且动画结束后保留最后状态。
+解决方法，在赋值前移动动画样式类。
+情况2：
+如果情况1 解决不了，则设置	-webkit-animation-fill-mode: none;
+  							animation-fill-mode: none;

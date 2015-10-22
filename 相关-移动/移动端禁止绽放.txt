@@ -1,0 +1,27 @@
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+
+属性解释:
+
+1.width
+
+width设置viewport的宽度，即iphone最初模拟PC浏览器的宽度，之后iphone会这个宽度展现的页面同比缩放到iphone屏幕上。设置width=device-width后就不会再进行缩放了，因为宽度正好和iphone的宽度相同（前提是没有设置缩放比例）。
+
+2.minimum-scale和maximum-scale
+
+控制用户允许设置的缩放比例的。
+
+3.user-scalable
+
+标识是否允许对页面进行缩放，取值有两个yes和no。设置为no则不允许进行页面缩放了。
+4.initial-scale
+
+设置用户最初看到页面时的缩放比例。
+5.target-densitydpi
+
+Android 浏览器所需要的，因为 Android 硬件设备标准不一， 其中同样物理尺寸的屏幕，可能因为 dpi 的不同而具有不同的分辨率，
+Android 浏览器默认会缩放页面以便最好地呈现， 可惜和 Java 的垃圾回收一样，它很难做到"最好"。所以最好还是人工指定吧。
+target-densitydpi 可以设定的值
+device-dpi - 设备本身的像素
+high-dpi -用高像素，中低像素屏幕适当缩小。
+medium- 中等像素，高的屏幕放大，低的变小是默认值
+low-dpi - 低像素，中高像素会适当变大。

@@ -1,0 +1,3 @@
+在使用用DataReader时
+DataReader reader=new ...
+reader.Close();//记得写上这一句

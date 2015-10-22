@@ -1,0 +1,1 @@
+WeixinJSBridge.call('closeWindow');

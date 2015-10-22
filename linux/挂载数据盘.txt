@@ -1,0 +1,16 @@
+﻿操作步骤：
+1。登陆服务器
+2。检查磁盘信息
+命令:fdisk -l
+
+3.磁盘分区
+命令:fdisk  
+例  fdisk /dev/xvdb1
+
+4.磁盘格式化
+命令：mkfs
+例  mkfs.ext3 /dev/xvdb1
+
+5.挂载数据盘
+命令 mount 
+例   mount kkisc

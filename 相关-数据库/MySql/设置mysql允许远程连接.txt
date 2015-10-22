@@ -1,0 +1,9 @@
+﻿让newuser用户使用newpwd密码从IP：192.168.1.3主机链接到mysql服务器  
+ 
+具体步骤：
+代码如下:
+mysql>GRANT ALL PRIVILEGES ON *.* TO ‘newuser’@’192.168.1.3′ IDENTIFIED BY ‘newpwd’ WITH GRANT OPTION;
+
+------GRANT ALL PRIVILEGES ON *.* TO 'newuser'@'%' IDENTIFIED BY 'newpwd' WITH GRANT OPTION;
+
+mysql>flush privileges;

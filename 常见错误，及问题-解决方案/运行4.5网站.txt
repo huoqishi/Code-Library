@@ -1,0 +1,9 @@
+注意：要以管理员的身份运行DOS窗口。
+
+复制右边的目录  C:\Windows\Microsoft.NET\Framework\v4.0.30319
+
+已经进入 C:\Windows\Microsoft.NET\Framework\v4.0.30319 此目录
+
+然后执行  aspnet_regiis.exe -i
+
+ok,这时的IIS就可以运行 .net 4.0 部署的网站了.

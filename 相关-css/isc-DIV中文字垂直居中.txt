@@ -1,0 +1,19 @@
+﻿1.方法一
+div中只有一行文字
+.div{
+	height:@vvv px;
+	line-height:@vvv px;
+}
+
+2.方法二
+div高度不确定，不确定有几行文字
+.div{
+	padding:10px;
+}
+
+3.方法三
+div高度确定,有多行文字
+.div{
+	display:table-cell;
+	vertail-align:middle;
+}

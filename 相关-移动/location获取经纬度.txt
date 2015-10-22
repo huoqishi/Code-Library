@@ -1,0 +1,22 @@
+﻿/// <reference path="jquery-2.1.1.min.js" />
+getLocation();
+function getLocation() {
+    if (navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition(subPosition);
+    }
+    else {
+        alert('定位失败');
+        //$('.error').css('display', 'block').css('position', 'absolute');
+        //$('.error').css('width', '50%').css('heigh','30%');
+    }
+}
+//提交经纬度
+function subPosition(position) {
+    $.post('/Location/GetLocation', {
+        longitude:position.coords.longitude,
+        latitude: position.coords.latitude,
+        mark:'index'
+    }, function (data) {
+
+    })
+}

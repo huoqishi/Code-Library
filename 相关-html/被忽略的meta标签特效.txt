@@ -1,0 +1,29 @@
+HTML 使用META标记为页面添加特效
+页面进入和退出的特效
+　　[meta http-equiv='Page-Enter' content='revealTrans(duration=x, transition=y)']
+　　[meta http-equiv='Page-Exit' content='revealTrans(duration=x, transition=y)']
+　　这个是页面被载入和调出时的一些特效。duration表示特效的持续时间，以秒为单位。transition表示使用哪种特效，取值为1-23:
+　　0 矩形缩小
+　　1 矩形扩大
+　　2 圆形缩小
+　　3 圆形扩大
+　　4 下到上刷新
+　　5 上到下刷新
+　　6 左到右刷新
+　　7 右到左刷新
+　　8 竖百叶窗
+　　9 横百叶窗
+　　10 错位横百叶窗
+　　11 错位竖百叶窗
+　　12 点扩散
+　　13 左右到中间刷新
+　　14 中间到左右刷新
+　　15 中间到上下
+　　16 上下到中间
+　　17 右下到左上
+　　18 右上到左下
+　　19 左上到右下
+　　20 左下到右上
+　　21 横条
+　　22 竖条
+　　23 以上22种随机选择一种

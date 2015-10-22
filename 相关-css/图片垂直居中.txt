@@ -1,0 +1,21 @@
+﻿垂直居中：
+1.
+div设置：position:relative;
+img设置：position:absolute;   top:50%;   height:图片高度;    margin-top:图片高度的一半;
+
+
+2.
+div设置:display:table-cell; vertical-align: middle;
+img设置:vertical-align: middle;//也可以不写
+
+3.推荐这种方法
+div设置：
+.Center-Container {  
+  position: relative;  
+}  
+img设置：
+.Absolute-Center {  
+  margin: auto;  
+  position: absolute;  
+  top: 0; left: 0; bottom: 0; right: 0;  
+} 

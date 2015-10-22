@@ -1,0 +1,60 @@
+EF 异步
+在连接字符串中包括敏感数据
+运行此文本模板可能损害您的计算机。
+
+安全警告，外键
+设置自己的NuGet服务器 ，添加 NuGet包--NuGetServer
+yield 字段
+
+存储过程本身不合理
+
+多条件查询：
+where(p=>p.id>2&&p.Name="ff")
+
+工具 linqpad ,直接将sql语句翻译为 linq语句
+
+联合查询：
+join 后需要有on
+
+from p in dbContext.Photos
+join a in dbContext.Albums
+on p.Albums equals a.Id     //这里用equals不能用=号
+where p.Id >5
+select new {p,a};
+
+Moon.orm
+
+dbContext.Dispose();//凡是类有Dispose()方法，则属于非托管资源，则用using括起来;
+EF,命令式编程，最经典的是Jquery
+
+double check
+
+private static DbContext _instance;
+public static DbContext CurrentText
+{
+	get
+	{
+		if(_instance==null)
+		{
+			lock("ContextFactory_Helper")//利用字符串的不可变性
+			{
+				if(_instance==null)
+				{
+					_instance=new GrkContext();
+				}
+				return _instance;
+			}
+		}
+		return _instance
+	}
+}
+单例模式
+线程内实例唯一。
+构造函数私化
+
+dapper:开源，目前只支持sqlsever
+ 不如ef方便，也是命令式编程，一个dll文件，也非常逆天
+ 把之前的sqlhelper封装封装
+
+NHeibenate：博客园，李永京，就是有点过于深了
+moon.orm:博客园的谁弄的

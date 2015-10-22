@@ -1,0 +1,19 @@
+﻿添加  以下四个系统变量
+
+ANDROID_HOME =  D:\Android\adt-bundle3\adt-bundle-windows-x86-20131030\sdk
+
+ANDROID_PLATFORM_TOOLS = D:\Android\adt-bundle3\adt-bundle-windows-x86-20131030\sdk\platform-tools
+
+ANDROID_TOOLS = D:\Android\adt-bundle3\adt-bundle-windows-x86-20131030\sdk\tools
+
+在path 最后，添加  ;%ANDROID_HOME%
+
+
+之后执行以下语句：cordova platform add android
+
+/////--------------------------------------------
+
+ANDROID_HOME  			D:\Android\adt-bundle3\adt-bundle-windows-x86-20131030\sdk
+Path          			;%ANDROID_HOME%\platform-tools;%ANDROID_HOME%\tools;
+
+cmd 下输入 adb测试是否配置成功

@@ -1,0 +1,6 @@
+﻿netstat命令，查看端口及协议
+1. netstat -a查看开启哪些端口 
+2. netstat -n查看端口的网络连接情况 
+3. netstat -v查看正在进行的工作 
+4. netstat -p tcp/ip查看某协议使用情况 
+5. netstat -s 查看正在使用的所有协议使用情况

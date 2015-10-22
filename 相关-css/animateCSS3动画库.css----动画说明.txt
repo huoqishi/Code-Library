@@ -1,0 +1,40 @@
+Especiais:                           Especiais：
+                                     
+dance                                舞蹈
+journal                              刊物
+pulse                                脉冲
+pulse-slow                           脉冲慢
+jamp                                 JAMP
+four-rock                            四岩
+Bounce:                              弹跳：
+                                     
+enter-up-bounce                      进入向上反弹
+enter-down-bounce                    进入向下反弹
+enter-right-bounce                   进入右反弹
+enter-left-bounce                    进入左反弹
+scale-bounce                         规模反弹
+jump-bounce                          跳反弹
+Perspective:                         视角：
+                                     
+tree-flip-right                      树倒装权
+tree-flip                            树翻转
+tree-flip-up                         树弹起式
+tree-flip-down                       树翻转向下
+flip-left-bounce                     翻转左反弹
+rotate-flip                          旋转翻转
+flip-right-bounce                    翻转右反弹
+Fading Entrances:                    褪色入口：
+                                     
+flip-top                             翻盖式
+flip-left                            翻转左
+flip-right                           倒装权
+flip-bottom                          翻盖底部
+Rotate:                              旋转：
+                                     
+rotate-flip-down                     旋转翻转向下
+rotate-down-bounce                   旋转式反弹
+rotate-out                           转出
+Agrecives:                           Agrecives：
+                                     
+flash-bang                           闪光爆炸
+bomba                                邦巴

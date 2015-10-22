@@ -1,0 +1,3 @@
+﻿<meta http-equiv="refresh" content="5;url=http://esctlg.panasonic.biz/es/lighting/home/jyutakuappli/index.html">
+
+content=5,是刷新时间，不写url这个参数，就是西面刷新

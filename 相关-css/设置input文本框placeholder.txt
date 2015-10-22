@@ -1,0 +1,22 @@
+input::-webkit-input-placeholder {
+    color: #999 !important; /* WebKit browsers */
+    font-family:Arial;
+}
+
+input:-moz-placeholder {
+    color: #999 !important;
+    font-family:Arial;
+    /*Mozilla Firefox 4 to 18 */;
+}
+
+input::-moz-placeholder {
+    color: #999 !important;
+    font-family:Arial;
+    /**/Mozilla Firefox 19+ /;
+}
+
+input:-ms-input-placeholder {
+    color: #999 !important;
+    font-family:Arial;
+    /*Internet Explorer 10+ */;
+}

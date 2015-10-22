@@ -1,0 +1,13 @@
+﻿注1：服务器端版本（grunt）和客户端版本（grunt-cli）（项目中用的是grunt-cli）
+注2：安装grunt-cli并不等于安装了grunt！grunt CLI的任务很简单：调用与Gruntfile在同一目录中的grunt。这样带来的好处是，允许你在同一个系统上同时安装多个版本的grunt。而grunt使用模块结构，除了安装命令行界面以外，还要根据需要安装相应的模块。这些模块应该采用局部安装，因为不同项目可能需要同一个模块的不同版本。
+//----------------------------------------------------
+安装Grunt：
+进入Node.js的安装目录（默认路径为"C:\Program Files\nodejs"）：
+cd \pro*\nod*
+1.如果你之前安装过老的0.3版本，请先卸载： -g 全局安装
+	npm uninstall -g grunt
+	
+	npm install -g grunt-cli
+	
+	npm install grunt@version  --save-dev //如npm install grunt@0.4.5  --save-dev
+	

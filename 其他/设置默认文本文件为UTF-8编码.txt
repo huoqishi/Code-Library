@@ -1,0 +1,6 @@
+﻿1,在桌面新建一个文本文档,不要写入任何内容,然后手动另存为,将此文档编码改为UTF-8,然后将文件名字改为 
+huoqishiUTF8.txt
+
+二、将此文件移动到C:\Windows\ShellNew这个文件夹下
+
+三、在运行中输入regedit,回车，打开HKEY_CLASSES_ROOT\.txt\ShellNew,然后鼠标右键，新建字符串值FileName,双击这个名字,输入C:\Windows\ShellNew\huoqishiUTF8.txt

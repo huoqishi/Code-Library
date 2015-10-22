@@ -1,0 +1,9 @@
+﻿<system.webServer>  
+  <httpProtocol>  
+    <customHeaders>  
+      <add name="Access-Control-Allow-Methods" value="OPTIONS,POST,GET"/>  
+      <add name="Access-Control-Allow-Headers" value="x-requested-with,content-type"/>  
+      <add name="Access-Control-Allow-Origin" value="*" />  
+    </customHeaders>  
+  </httpProtocol>  
+</system.webServer>  

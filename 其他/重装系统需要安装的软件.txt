@@ -1,0 +1,22 @@
+﻿软件媒魔方
+visual studio 2013
+mysql
+安装输入法
+chrome 浏览器 安装红杏
+visual studio 2015
+office 2013
+
+jdk安装并配置
+配置 android sdk
+apache-ant 安装并配置
+node.js
+git
+npm
+cordova
+android studio
+qq
+wechat 电脑版
+miro video convert
+visual studio code
+将everything服务开机自启
+处理相关快捷方式

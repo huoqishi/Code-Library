@@ -1,0 +1,11 @@
+﻿select Sum(c.Count,UnitPrice) from Cart as c
+inner join Goods as b
+on c.BookId = b.Id
+where c.UserId = 2002
+
+///
+Cart 购物车表，
+Goods 商品表，
+
+Count 购物车中商品数量
+UnitPrice 商品表中商品单价

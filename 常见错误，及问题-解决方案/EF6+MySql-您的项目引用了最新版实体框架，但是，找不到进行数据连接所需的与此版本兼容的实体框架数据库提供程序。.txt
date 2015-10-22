@@ -1,0 +1,15 @@
+﻿您的项目引用了最新版实体框架，但是，找不到进行数据连接所需的与此版本兼容的实体框架数据库提供程序。
+
+mysql+EF
+1.mysql-for-visualstudio-1.2.3
+2.mysql-connector-net-6.9.6
+
+
+3.安装 install mysql.data.entity -version  6.9.6   //不是mysql.data.entity.ef6
+
+添加结点;
+<provider invariantName="MySql.Data.MySqlClient" type="MySql.Data.MySqlClient.MySqlProviderServices, MySql.Data.Entity.EF6"></provider>
+
+如果还是无法使用添加框架，则先将项目重新生成一下。----------切记
+
+Lucy_Ailisi_6312

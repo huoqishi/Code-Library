@@ -1,0 +1,1 @@
+<add name="connStr" connectionString="server=.;uid=isc;pwd=isc;database=ItcastDb"/>

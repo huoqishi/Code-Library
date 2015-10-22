@@ -1,0 +1,9 @@
+﻿jQuery:
+$(document).scrollTop(); 
+//获取滚动条到左边的垂直宽度 
+$(document).scrollLeft();
+
+
+JS:
+document.body.scrollTop()
+document.body.scrollLeft()

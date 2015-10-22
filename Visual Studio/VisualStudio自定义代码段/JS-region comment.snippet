@@ -1,0 +1,27 @@
+<CodeSnippet Format="1.1.0" xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <Header>
+    <Title>region</Title>
+    <Author>Microsoft Corporation</Author>
+    <Shortcut>region</Shortcut>
+    <Description>用于添加自定义区域的代码段</Description>
+    <SnippetTypes>
+      <SnippetType>Expansion</SnippetType>
+      <SnippetType>SurroundsWith</SnippetType>
+    </SnippetTypes>
+  </Header>
+  <Snippet>
+    <Declarations>
+      <Literal>
+        <ID>name</ID>
+        <ToolTip>名称值</ToolTip>
+        <Default>name</Default>
+      </Literal>
+    </Declarations>
+    <Code Language="JavaScript">
+        <![CDATA[//#region $name$ //
+
+$selected$$end$
+
+//#endregion //]]></Code>
+  </Snippet>
+</CodeSnippet>

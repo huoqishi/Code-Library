@@ -1,0 +1,12 @@
+﻿.my-btn{
+            border:0;
+            border-radius:4px;
+            color:#fff;
+            background-color:#c610f6;
+            height:37px;
+            min-width:80px;
+            outline:none;
+        }
+        .my-btn:active{
+            background-color:#662379;
+        }

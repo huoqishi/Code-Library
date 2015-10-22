@@ -1,0 +1,17 @@
+﻿//栈
+var a=new Array();
+a.push(1);
+a.push(2);
+a.push(3);
+a.push(4);
+console.log("后进先出")
+a.pop()
+
+//队列
+var a=new Array();
+a.unshift(1);
+a.unshift(2);
+a.unshift(3);
+a.unshift(4);
+console.log("先进先出")
+a.pop()

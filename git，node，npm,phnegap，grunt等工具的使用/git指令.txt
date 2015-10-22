@@ -1,0 +1,8 @@
+ 克隆git到本地:
+ git clone git://github.com/jquery/jquery.git
+
+ 1.将一个新项目克隆到本地
+ 如：https://github.com/huoqishi/NewRepo.git
+ 先cd到 想发克隆的目录   如 c:/user
+
+执行命令：git clone  https://github.com/huoqishi/NewRepo.git

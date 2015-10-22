@@ -1,0 +1,4 @@
+Could not load file or assembly 'System.Web.Http.WebHost, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35' or one of its dependencies. 系统找不到指定的文件。 
+
+解决方法:
+在项目引用的程序集中-右键属性，设置复制到本地为true

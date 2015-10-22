@@ -1,0 +1,10 @@
+﻿移动端js更改dom样式不能即时渲染问题：
+例：
+使用百度touch.js，做h5切屏动画时
+touch('','dragstart'){
+	/*如果在此处获取操作，然后在drag事件中改变属性，开始时会有卡卡顿现象*/
+	/*主要原因是,dragstart事件其实已经是原生事件的中touchmove了，
+	所以dragstart与drag事件的触发几乎没有延迟,操作还未能获取。
+	解决方法，直接在touchstart中获取操作对象。
+	*/
+}

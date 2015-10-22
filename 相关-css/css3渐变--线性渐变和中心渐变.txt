@@ -1,0 +1,22 @@
+﻿1.线性渐变：
+左--右
+background-image: linear-gradient(to right, #ffffff, #000000);
+
+对角
+background-image: linear-gradient(to bottom top, #ffffff, #000000);
+
+角度
+background: linear-gradient(45deg, #ffffff, #000000);
+
+多个颜色渐变:
+background-image: linear-gradient(to bottom top, #ffffff,#ff0, #000000);
+
+重复的线性渐变：
+background: repeating-linear-gradient(red, yellow 10%, green 20%);
+
+2.径向渐变：
+
+background: radial-gradient(red, green, blue); /* 标准的语法 */
+
+
+
