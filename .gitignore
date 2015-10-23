@@ -17,4 +17,7 @@ $RECYCLE.BIN/
 # Windows shortcuts
 *.lnk
 
-web前端-插件/
+#html5 plus----------
+unpackage/
+tmp/
+img/tmp/
